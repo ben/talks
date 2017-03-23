@@ -10,12 +10,11 @@
 
 ### *![](images/Twitter_logo_blue.png) benstraub*
 
-<!-- ![](/Users/ben/Dropbox/Photos/BenHeadshot_sq.jpg) -->
-![](/Users/ben/Dropbox/Photos/BenHeadshot2.jpg)
+![](images/headshot.jpg)
 
 ---
 
-![inline](/Users/ben/src/progit2/book/cover.png)
+![inline](images/book.png)
 
 ^
 i helped write a book on git
@@ -984,6 +983,4 @@ and then tweet me and let me know how it turns out
 
 ### ![](images/Twitter_logo_blue.png) *@benstraub*
 
-<!-- ![](/Users/ben/Dropbox/Photos/BenHeadshot_sq.jpg) -->
-![](/Users/ben/Dropbox/Photos/BenHeadshot2.jpg)
-
+![](images/headshot.jpg)
