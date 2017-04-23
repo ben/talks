@@ -9,19 +9,21 @@
 
 # Ben Straub
 
-## *![](images/github.png) ben*
-
 ## *![](images/twitter.png) benstraub*
 
 ![original](images/headshot.jpg)
 
-^ My name is Ben Straub. I'm 'ben' on GitHub and 'benstraub' pretty much everywhere else.
+^ My name is Ben Straub.
 
 ---
 
-# TODO: images of Wacom and GHfW
+![](./images/wacom.jpg)
 
 ^ I've worked on a lot of things in my career, from device drivers to desktop applications to a book on git
+
+---
+
+![](./images/ghfw.png)
 
 ---
 
@@ -256,15 +258,15 @@ Contrast this to getting an actual birthday card. Someone had to go to the store
 
 ^ Second, he mentions @channel. This ensures that all the people in that channel know a high-five has happened. This mimics the sharp sound of a real-life high-five.
 
-^ Thirdly, and most interestingly, he uses the company credit card to order an Amazon gift card, and emails the redemption code to Greg.
+^ Thirdly, and most interestingly, he uses the company credit card to order an Amazon gift card, and emails it to Greg.
 
-^ Now Patrick could have done all of that manually, and it would have taken maybe 5 minutes, but having Gort do it for him took all of 10 seconds. A momentary impulse that makes someone feel appreciated. It's like they just slapped hands, but rainbow sparks exploded from the place where their palms met, and heavenly music played, and then Greg found $75 in his back pocket.
+^ Now Patrick could have done all of that manually, and it would have taken maybe 5 minutes, but having Gort do it for him took maybe 10 seconds. A momentary impulse that makes someone feel appreciated. It's like they just slapped hands, but rainbow sparks exploded from the place where their palms met, and heavenly music played, and then Greg found $75 in his back pocket.
 
 ---
 
 ![inline,autoplay,loop](./images/highfive2.mov)
 
-^ Here's another example, this happened about two weeks before the birth of David's first child, and he tried to land a dad joke, and it didn't quite work.
+^ Here's another example, this happened about two weeks before the birth of David's first child, and he was trying to land a dad joke, and it didn't quite work.
 
 ---
 
@@ -276,9 +278,9 @@ Contrast this to getting an actual birthday card. Someone had to go to the store
 
 # [fit] First six months
 ## ` `
-## 150 gifts
-## Average gift $24
-## Average receipts $25
+## _**150**_ gifts
+## Average gift _**$24**_
+## Average receipts _**$25**_
 
 ^ So we shipped this to the entire company, which I think was 15 people at the time, and it was immediately beloved. There was a spike of activity due to the novelty, after which it seemed like 3 or 4 times a week was pretty common. I think the average gift card size was around $24, which seemed about right.
 
@@ -288,7 +290,15 @@ Contrast this to getting an actual birthday card. Someone had to go to the store
 
 ![](./images/peeler.jpg)
 
-^ We even saw some emergent behavior, like the habit of sharing what you were going to buy with the money you just got. This is a really nice set of peelers someone got. There was gentle social pressure to treat yourself, rather than order more cat food.
+^ We even saw some emergent behavior, like the habit of sharing what you were going to buy with the money, and there was gentle social pressure to treat yourself, instead of just ordering more cat food. This is a really nice set of peelers someone got. I also have them, they're super nice.
+
+---
+
+` `
+` `
+## `!highfive @nick $4.23 for finding something on Amazon for exactly $4.23`
+
+^ Of course this led to _more_ emergent behavior around that convention.
 
 ---
 
@@ -296,17 +306,97 @@ Contrast this to getting an actual birthday card. Someone had to go to the store
 
 ^ Culturally there weren't a lot of downsides. The one that I can think of is that some people got anxiety about choosing dollar amounts. They'd want to thank someone, but now they had to decide exactly how _much_ to thank them.
 
-^ Another one, and there's no real way to quantify this, is the increased number of interruptions. This seemed to be self-limiting, though; people would consider the channel mention when they were deciding to high-five someone, and they'd choose an appropriate channel to do it in.
+^ Another one, and there's no real way to quantify this, is the increased number of interruptions. This seemed to be self-limiting, though; people would consider the channel mention when they were deciding to high-five someone, and they'd choose an appropriate channel to do it in. It really helps that everyone at one time or another played all the roles in this system: giver, receiver, and bystander.
 
 ---
 
-# [fit] _**You**_ can do
-# [fit] this too
+# [fit] Automating
+# [fit] a thing says:
+
+^ So adding an automation, making a tool for everyone to use, affects the culture around it. With a little care, we can be more deliberate about what kind of change we're introducing. When people first learn about an automation, they're going to read meaning into the fact that it was automated at all.
 
 ---
 
-# TODO: Hubot
+# [fit] We want this thing
+# [fit] _**to be done often**_
+
+^ It says we're going to be doing this thing more than once, following a fairly simple pattern.
 
 ---
 
-# TODO: Botkit
+# [fit] We want this thing
+# [fit] _**to be done right**_
+
+^ It says we want to take human error out of the equation as much as possible.
+
+---
+
+# [fit] We want this thing
+# [fit] _**to be visible**_
+
+^ Specifically for cultural automation, we want more than just one person to see this thing happening
+
+---
+
+# [fit] We want this thing
+# [fit] _**to be impersonal**_
+
+^ And we don't care how personal it is. This one is important when the target of the automation is a person.
+
+---
+
+# [fit] _**You**_ can
+# [fit] do this
+
+^ The biggest thing I want you to take away from this talk is that you can do this too. Step 1 is to get your team into some chat software, even if you're all working from the same room. There are lots of benefits to this, (elaborate if time).
+
+^ Step two is to add a robot to your chat. This sounds kind of daunting, but it doesn't have to be.
+
+---
+
+![inline](./images/hubot-site.png)
+
+# https://hubot.github.com/
+
+^ There are a number of ready-made robots you can spin up and start customizing. GitHub's Hubot is open-source, and there are a ton of plugins you can just add in and configure. The plugin that runs high-five is one of them.
+
+---
+
+![inline](./images/err-site.png)
+
+# http://errbot.io/
+
+^ If you're not into Javascript, you can try Err, which is written in Python
+
+---
+
+![inline](./images/lita-site.png)
+
+# https://www.lita.io/
+
+^ Or Lita, which is written in Ruby. Both of these have also been around for a while, and have a lively ecosystem of plugins, although not nearly so extensive as Hubot.
+
+---
+
+![inline](./images/botkit-site.png)
+
+# https://www.botkit.ai/
+
+^ And if you want to dig into the internals a bit more and as a result get more control over the output into your chat software, I'm pretty excited about Botkit. This is especially interesting if you're wanting to use specific features of your chat software, like Slack threading and interactive buttons and such.
+
+---
+
+# [fit] Automate
+# [fit] something
+
+^ the last step is to automate something. Pick something easy to start with, like maybe checking how long it's been since you released your software. It's easiest to start with just reading information out of an existing system or doing something socially fun. Once people start trusting the robot to do silly things, it'll be easier for them to trust it with serious work.
+
+---
+
+# Ben Straub
+
+## *![](images/twitter.png) benstraub*
+
+![original](images/headshot.jpg)
+
+^ The final step is to let me know what you did and how it turned out. Thanks.
