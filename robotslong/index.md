@@ -51,7 +51,11 @@
 
 ---
 
-![](images/chopping-wood.jpg)
+![original](images/chopping-wood.jpg)
+
+[^≈]
+
+[^≈]: https://www.flickr.com/photos/jackal1/15066929313
 
 ^ No words, just a simple image, and yet it tells a larger story than he could have fit into 20 minutes of typing into a text field.
 
@@ -94,9 +98,15 @@
 
 ---
 
+![](./images/hubot.jpg)
+
+^ I should mention that automation at GitHub is given a personality. Hubot is the name of the robot who lives in the chat room, and who is the conduit for all the things you can do from the chat room.
+
+---
+
 ![](./images/deploy.jpg)
 
-^ One example is deployment. GitHub deploys to production upwards of 200 times every week, and pretty much the only UI for deploying is the chat room.
+^ One example is deployment. GitHub deploys to production upwards of 200 times every week, and pretty much the only UI for deploying is the chat room - you just tell Hubot to go do a deploy.
 
 ^ This has a number of benefits. Obviously, it's easy to see when someone is doing a deploy, but dig a little deeper and you see all sorts of social niceties with this. Everyone on the team sees all of the deploys happen. When a deploy goes badly, you don't need to go alert the team, they can see it happening right in front of them.
 
@@ -104,11 +114,11 @@
 
 ---
 
-# TODO: image of metrics
+![](./images/graph-me.png)
 
 ^ Another great example is metrics. Gathering metrics and displaying graphs and dashboards is probably something we've all done, but doing it in a chat room adds a social aspect to it.
 
-^ When you put up a graph in the chat room, you're saying to the rest of the team "everybody look at this, there's something important I'm looking at." It's less like digging through metrics, and more like putting something on the big screen at the front of mission control.
+^ When you put up a graph in the chat room, you're saying to the rest of the team "everybody look at this, there's something important I want you to see." It's less like digging through metrics, and more like putting something on the big screen at the front of mission control.
 
 ---
 
@@ -120,11 +130,11 @@
 
 # [fit] Chat_**Ops**_
 
-^ Jesse Newland coined the term chatops to describe this stuff. I've talked about the benefits, but there are drawbacks as well. The most obvious one is noise. When your whole product team is 5 or maybe 10 people, the amount of content scrolling by in the chat room is manageable, but at 50 it's almost unbearable. You're probably deploying and monitoring 10 projects independently, so you move some of them into separate rooms, and pretty sure your Slack looks like this.
+^ Jesse Newland coined the term ChatOps to describe this stuff. I've talked about the benefits, but there are drawbacks as well. The most obvious one is noise. When your whole product team is 5 or maybe 10 people, the amount of content scrolling by in the chat room is manageable, but with a team of 50 it's almost unbearable. You're probably deploying and monitoring 10 projects independently, so you move some of them into separate rooms, and pretty soon your Slack looks like this.
 
 ---
 
-# TODO: doctored screenshot, Slack with lots of unread channels
+![](./images/slack-unreads.png)
 
 ^ Then you have the problem of figuring out which of these unread notifications you need to read. You can manage this with rooms specifically for doing chatops, but you lose some of the social benefits. People start tuning it out, and you lose your situational awareness.
 
@@ -224,10 +234,79 @@ Contrast this to getting an actual birthday card. Someone had to go to the store
 
 ^ But the most interesting response I got was from our office in Australia. I mentioned before that the semantics of the word "guys" is dependent on culture. It turns out that in Australia, 'guys' truly is a gender-neutral term, their whole team agreed. But as part of that discussion, certain other terms were retired from use in their office. They actually had a conversation, as a team, about making sure they didn't inadvertently hurt each other with casual language. This was _way_ beyond the design goals for this little plugin, and I was super thrilled when they told me.
 
+^ I also used to work at a company called Gridium, and we had a Hubot there, too. We taught him a few tricks, but probably the best one was the highfive.
+
 ---
 
-# TODO: Highfive
+![](./images/high-five-fwp.jpg)
 
-^ I also used to work at a company called Gridium, and we had a Hubot there, too.
+^ A real-life high-five is a simple thing, in human terms. It's just two people clapping cooperatively. There isn't a lot of thought that goes into it, just a momentary impulse. Automation can't really screw this up, but it can make it way more awesome. This is easiest to describe with an example.
 
-^ We taught him a few tricks, but probably the best one was the highfive.
+---
+
+![](./images/highfive.png)
+
+^ Greg was the chief mathematician, and he wrote the model that's at the heart of their energy-management product. Patrick was on the sales team, and in order to do his job well, he needed to understand how all the math translated into value for the customer. Greg was a fabulous teacher, and had regular sessions with the sales team teaching them how to think about the model, so Patrick wanted to thank him. So he typed this into slack.
+
+---
+
+![inline,autoplay,loop](./images/highfive.mov)
+
+^ Gridium's hubot instance (whose name is gort) leaps into action, and does three interesting things. First, he drops a gif into the channel. He has a collection of these that he draws from randomly.
+
+^ Second, he mentions @channel. This ensures that all the people in that channel know a high-five has happened. This mimics the sharp sound of a real-life high-five.
+
+^ Thirdly, and most interestingly, he uses the company credit card to order an Amazon gift card, and emails the redemption code to Greg.
+
+^ Now Patrick could have done all of that manually, and it would have taken maybe 5 minutes, but having Gort do it for him took all of 10 seconds. A momentary impulse that makes someone feel appreciated. It's like they just slapped hands, but rainbow sparks exploded from the place where their palms met, and heavenly music played, and then Greg found $75 in his back pocket.
+
+---
+
+![inline,autoplay,loop](./images/highfive2.mov)
+
+^ Here's another example, this happened about two weeks before the birth of David's first child, and he tried to land a dad joke, and it didn't quite work.
+
+---
+
+![inline,autoplay,loop](images/highfive3.mov)
+
+^ I sent this one when one of our founders discovered that you could only send whole-dollar gift cards using the high-five system. I'm _pretty_ sure it sent three dollars and 14 cents.
+
+---
+
+# [fit] First six months
+## ` `
+## 150 gifts
+## Average gift $24
+## Average receipts $25
+
+^ So we shipped this to the entire company, which I think was 15 people at the time, and it was immediately beloved. There was a spike of activity due to the novelty, after which it seemed like 3 or 4 times a week was pretty common. I think the average gift card size was around $24, which seemed about right.
+
+^ So in terms of a product launch, it was a success. In terms of how we wanted to nudge the company culture, it was an even bigger success. People started thanking each other more, in a very public way. The way it was designed made both the giver and receiver feel pretty good, so people were happier to go out of their way to help others. It was a very positive change.
+
+---
+
+![](./images/peeler.jpg)
+
+^ We even saw some emergent behavior, like the habit of sharing what you were going to buy with the money you just got. This is a really nice set of peelers someone got. There was gentle social pressure to treat yourself, rather than order more cat food.
+
+---
+
+# [fit] Downsides
+
+^ Culturally there weren't a lot of downsides. The one that I can think of is that some people got anxiety about choosing dollar amounts. They'd want to thank someone, but now they had to decide exactly how _much_ to thank them.
+
+^ Another one, and there's no real way to quantify this, is the increased number of interruptions. This seemed to be self-limiting, though; people would consider the channel mention when they were deciding to high-five someone, and they'd choose an appropriate channel to do it in.
+
+---
+
+# [fit] _**You**_ can do
+# [fit] this too
+
+---
+
+# TODO: Hubot
+
+---
+
+# TODO: Botkit
