@@ -40,14 +40,14 @@
 # [fit] cultural
 # [fit] automation
 
-^ Specifically cultural automation, which I think is a term I made up as I was writing this talk. What I mean by "cultural automation" is the use of machines to assist with social interactions. We've all done this.
+^ Specifically **cultural automation**, which I think is a term I made up as I was writing this talk. What I mean by "cultural automation" is the use of machines to assist with social interactions. We've all done this.
 
 ---
 
 ![fit](images/imessage-location.jpg)
 ![fit](images/imessage-balloons.gif)
 
-^ I'm assuming everyone in this room has at some point used an image or an emoji instead of some words in an otherwise textual medium. This is what I mean by _cultural automation:_ not only do the tools give you a way of sending something that was hard to do before, but they do it in a way that affords adding human meaning to the message.
+^ I'm pretty sure everyone in this room has at some point used an image or an emoji instead of some words to reply to a text message. This is what I mean by **cultural automation:** not only do the tools make it possible to do something new, but they do it in a way that affords adding human meaning.
 
 ^ I've known people who are _really_ good at this. One person I know took some time off between jobs, and when he was asked in a chat room what he did with himself during his months-long absence, he replied only with a photo like this.
 
@@ -348,9 +348,55 @@ Contrast this to getting an actual birthday card. Someone had to go to the store
 # [fit] _**You**_ can
 # [fit] do this
 
-^ The biggest thing I want you to take away from this talk is that you can do this too. Step 1 is to get your team into some chat software, even if you're all working from the same room. There are lots of benefits to this, (elaborate if time: enables remoteness, transcript of discussions, benefits of open office while still being able to close the door, …).
+^ The biggest thing I want you to take away from this talk is that you can do this too.
 
-^ Step two is to add a robot to your chat. This sounds kind of daunting, but it doesn't have to be.
+---
+
+# [fit] _**Step 1:**_
+# [fit] Get chat
+
+^ Step 1 is to get your team into some chat software, even if you're all working from the same room.
+
+---
+
+![](./images/silicon-valley.jpg)
+
+^ There are lots of benefits to this, probably my favorite is that it starts making it possible to work remotely, which is becoming kind of a big deal.
+
+---
+
+![](./images/remote-survey.png)
+
+^ This is from the Stack Overflow survey earlier this year. Turns out programmers prefer remote work to almost any other perk a company can offer.
+
+---
+
+![](./images/remote-rate.png)
+
+^ And it's not just programmers either. Rates of people working remotely have been rising in lots of professions. Which is great, because everyone should benefit from cultural automation, not just engineers.
+
+^ I could go on and on about chat. You get a searchable transcript of important discussions, you get a lot of the cross-pollination that you get in an open office, while still being able to "shut the door" by quitting the app. There's lots of good stuff here, but I'm going to assume you're already sold on the idea.
+
+---
+
+# [fit] _**Step 2:**_
+# [fit] Get a bot
+
+^ Step two is to add a robot to your chat. This is becoming kind of a big deal too.
+
+---
+
+## Contextualizing Virtual Assistants for More Effective Meetings in the Digital Workplace
+
+## _**https://www.gartner.com/doc/3649117**_
+
+^ This is a report from the Gartner group, and the title is kind of gibberishy, but here's their main prediction:
+
+---
+
+> By 2020, 60% of meetings with 3 or more participants will involve a virtual assistant.
+
+^ Far from just being toys for nerds, bots will be a part of everyday business, and sooner than you think. So writing a bot for your company might even be a good strategic move, who knows? Anyways, here's what you do to make one. First, choose a framework.
 
 ---
 
@@ -358,7 +404,7 @@ Contrast this to getting an actual birthday card. Someone had to go to the store
 
 # https://hubot.github.com/
 
-^ There are a number of ready-made robots you can just spin up and start customizing. GitHub's Hubot is open-source, and there are a ton of plugins you can just add in and configure. The plugin that runs high-five is one of them. Hubot is written in Coffeescript (I know, I know, artifact of its time, etc), but if you want a break from JS,
+^ There are a number of these that you can just spin up and start customizing. GitHub's Hubot is open-source, and there are a ton of plugins you can just add in and configure. The plugin that runs high-five is one of them. Hubot is written in Coffeescript, and before you say anything realize that it's an artifact of its time. I know everybody in this room writes JS all day long, so if you want a break,
 
 ---
 
@@ -374,7 +420,7 @@ Contrast this to getting an actual birthday card. Someone had to go to the store
 
 # https://www.lita.io/
 
-^ Or Lita, which is written in Ruby. Both of these have also been around for a while, and have a lively ecosystem of plugins, although not nearly so extensive as Hubot.
+^ Or Lita, which is written in Ruby. Both of these have also been around for a while, and have a lively ecosystem of plugins, although Hubot is still the king in terms of ecosystem.
 
 ---
 
@@ -382,14 +428,14 @@ Contrast this to getting an actual birthday card. Someone had to go to the store
 
 # https://www.botkit.ai/
 
-^ And if you want to really dig into the internals and get more control over the UI in your chat system, I'm pretty excited about Botkit. This is especially interesting if you're wanting to use specific features of your chat software, like Slack threading and interactive buttons and such.
+^ And if you want to really dig into the internals and get more control over the UI in your chat system, I'm pretty excited about Botkit. This is especially interesting if you're wanting to use specific features of your chat software, like Slack threading and interactive buttons and such, or if you want to make your bot available to more than one Slack team.
 
 ---
 
-# [fit] Automate
-# [fit] _**something**_
+# [fit] _**Step 3:**_
+# [fit] get hacking
 
-^ the last step is to automate something. Pick something easy to start with, like maybe you can ask the bot how long it's been since you released your software. It's easiest to start with just reading information out of an existing system or doing something socially fun. Once people start trusting the robot to do silly things, it'll be easier for them to trust it with serious work.
+^ the last step is to automate something. Pick something easy to start with, like maybe you can ask the bot how long it's been since you released your software. It's easiest to start with just reading information out of an existing system or doing something socially fun. Once people start trusting the robot to do silly things, it'll be easier for them to trust it with serious work. These bot frameworks do all the plumbing for you, so you just have to do the interesting part.
 
 ---
 
@@ -401,6 +447,8 @@ robot.hear(
   (msg) => { msg.reply('PONG') }
 )
 ```
+
+^ For instance, here's what it looks like to do a simple call/response in Hubot. Robot.hear takes a regex, which if it matches an incoming message, it'll call the second argument, which is where you put all the meat of your plugin.
 
 ---
 
@@ -415,6 +463,8 @@ class Ping(BotPlugin):
     return "PONG"
 ```
 
+^ Here's what that looks like for Err, in Python
+
 ---
 
 # "Ping" in Lita
@@ -424,6 +474,8 @@ route(/ping/) do |response|
   response.reply 'PONG'
 end
 ```
+
+^ And in Ruby, for Lita.
 
 ---
 
@@ -437,6 +489,14 @@ controller.hears(
 )
 ```
 
+^ And back to JS, this is Botkit. Botkit gives you a bit more control over what kind of contexts it'll match your regex in, so you can constrain something to just direct messages for instance.
+
+---
+
+![fit](./images/highfive-code.png)
+
+^ Of course, doing real work won't be this simple. Here's the code for the highfive plugin. But it's not a huge amount of code just over 300 lines, and most all of the stuff you don't want to worry about is abstracted away. This isn't as hard as you think it is, I guarantee it.
+
 ---
 
 # Ben Straub
@@ -445,4 +505,4 @@ controller.hears(
 
 ![original](images/headshot.jpg)
 
-^ The final step is to let me know what you did and how it turned out. Thanks.
+^ Of course, the real last step is to let me know what you did and how it turned out. I'm really looking forward to hearing what kinds of things you come up with. Thanks.
