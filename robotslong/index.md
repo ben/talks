@@ -313,7 +313,7 @@ Contrast this to getting an actual birthday card. Someone had to go to the store
 # [fit] Automating
 # [fit] a thing says:
 
-^ So adding an automation, making a tool for everyone to use, affects the culture around it. With a little care, we can be more deliberate about what kind of change we're introducing. When people first learn about an automation, they're going to read meaning into the fact that it was automated at all.
+^ So adding an automation, making a tool for your team to use socially, affects the culture around it. With a little care, we can be more deliberate about what kind of change we're introducing. When people first learn about an automation, they're going to read meaning into the fact that it was automated at all.
 
 ---
 
@@ -348,29 +348,29 @@ Contrast this to getting an actual birthday card. Someone had to go to the store
 # [fit] _**You**_ can
 # [fit] do this
 
-^ The biggest thing I want you to take away from this talk is that you can do this too. Step 1 is to get your team into some chat software, even if you're all working from the same room. There are lots of benefits to this, (elaborate if time).
+^ The biggest thing I want you to take away from this talk is that you can do this too. Step 1 is to get your team into some chat software, even if you're all working from the same room. There are lots of benefits to this, (elaborate if time: enables remoteness, transcript of discussions, benefits of open office while still being able to close the door, …).
 
 ^ Step two is to add a robot to your chat. This sounds kind of daunting, but it doesn't have to be.
 
 ---
 
-![inline](./images/hubot-site.png)
+![inline](./images/hubot2.png)
 
 # https://hubot.github.com/
 
-^ There are a number of ready-made robots you can spin up and start customizing. GitHub's Hubot is open-source, and there are a ton of plugins you can just add in and configure. The plugin that runs high-five is one of them.
+^ There are a number of ready-made robots you can just spin up and start customizing. GitHub's Hubot is open-source, and there are a ton of plugins you can just add in and configure. The plugin that runs high-five is one of them. Hubot is written in Coffeescript (I know, I know, artifact of its time, etc), but if you want a break from JS,
 
 ---
 
-![inline](./images/err-site.png)
+![inline](./images/err.png)
 
 # http://errbot.io/
 
-^ If you're not into Javascript, you can try Err, which is written in Python
+^ You can try Err, which is written in Python
 
 ---
 
-![inline](./images/lita-site.png)
+![inline](./images/lita.png)
 
 # https://www.lita.io/
 
@@ -378,18 +378,64 @@ Contrast this to getting an actual birthday card. Someone had to go to the store
 
 ---
 
-![inline](./images/botkit-site.png)
+![inline](./images/botkit.png)
 
 # https://www.botkit.ai/
 
-^ And if you want to dig into the internals a bit more and as a result get more control over the output into your chat software, I'm pretty excited about Botkit. This is especially interesting if you're wanting to use specific features of your chat software, like Slack threading and interactive buttons and such.
+^ And if you want to really dig into the internals and get more control over the UI in your chat system, I'm pretty excited about Botkit. This is especially interesting if you're wanting to use specific features of your chat software, like Slack threading and interactive buttons and such.
 
 ---
 
 # [fit] Automate
-# [fit] something
+# [fit] _**something**_
 
-^ the last step is to automate something. Pick something easy to start with, like maybe checking how long it's been since you released your software. It's easiest to start with just reading information out of an existing system or doing something socially fun. Once people start trusting the robot to do silly things, it'll be easier for them to trust it with serious work.
+^ the last step is to automate something. Pick something easy to start with, like maybe you can ask the bot how long it's been since you released your software. It's easiest to start with just reading information out of an existing system or doing something socially fun. Once people start trusting the robot to do silly things, it'll be easier for them to trust it with serious work.
+
+---
+
+# "Ping" in Hubot
+
+```js
+robot.hear(
+  /ping/i,
+  (msg) => { msg.reply('PONG') }
+)
+```
+
+---
+
+# "Ping" in Err
+
+```py
+from errbot import BotPlugin, botcmd
+
+class Ping(BotPlugin):
+   @botcmd
+   def ping(self, msg, args):
+    return "PONG"
+```
+
+---
+
+# "Ping" in Lita
+
+```rb
+route(/ping/) do |response|
+  response.reply 'PONG'
+end
+```
+
+---
+
+# "Ping" in Botkit
+
+```js
+controller.hears(
+  /ping/i,
+  ['direct_message', 'direct_mention', 'mention'],
+  (bot, msg) => { bot.reply(msg, 'PONG') }
+)
+```
 
 ---
 
