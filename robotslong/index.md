@@ -204,28 +204,28 @@ Contrast this to getting an actual birthday card. Someone had to go to the store
 
 ^ Chrisbot was successful in removing the drudgery of photoshopping Chris's face into photos. But it also removed the humanity, the care and taste that goes into making something funny. When a new chrisified photo comes through now, we're not laughing at the cleverness of the person doing the photoshopping, we're laughing at the reckless computer trying to be funny. We're not just laughing _with_ chrisbot, we're laughing _at_ chrisbot, and that's a totally different dynamic.
 
-^ Chrisbot also only knows how to tell one joke, and that joke won't be funny forever. So my prediction is that chrisbot has either been turned down, by maybe only responding to a fraction of the images with faces, or banished to one specific channel.
+^ Chrisbot also only knows how to tell one joke, and that joke won't be funny forever. I reached out to Jason, and he told me that chrisbot is still running, but my prediction is that he'll need to be constantly tweaked to stay relevant and fresh, as most entertainment products do.
 
 ---
 
 # [fit] Break:
 # [fit] _**lessons**_
 
-^ Okay, we're three stories in. How's everybody feeling? Okay? This is probably a good time to stop and think about what we've learned before I tell a few more.
+^ So I have a few more stories to tell you, but this is a great time to stop and take stock of what we've learned.
 
 ---
 
 # [fit] Automating
 # [fit] a thing says:
 
-^ So adding an automation, making a tool for your team to use socially, affects the culture around it. When people first learn about an automation, they're going to read meaning into the fact that it was automated at all.
+^ There's a saying in the art world that the medium is part of the message. The medium of automating things with chat robots adds some connotation to the thing you're automating.
 
 ---
 
 # [fit] We want this thing
 # [fit] _**to be done often**_
 
-^ It says we're going to be doing this thing more than once, following a fairly simple pattern.
+^ It says we're going to be doing this thing more than once, in exactly the same way, or following a fairly simple pattern.
 
 ---
 
@@ -246,17 +246,17 @@ Contrast this to getting an actual birthday card. Someone had to go to the store
 # [fit] We want this thing
 # [fit] _**to be impersonal**_
 
-^ And we don't care how personal it is. This one is important when the target of the automation is a person.
+^ And we don't care how personal it is. This one is important when the target of an automation is a person.
 
 ---
 
 ![](images/river-stone.jpg)
 
-^ One of the key things I noticed as I was putting this together is that every one of these automations had an affect on the culture it was inserted into. Every one has a story that goes "well we used to do it one way, and now we do something else." They have changed the human culture around them, like a stone in a river.
+^ One of the key things I noticed as I was putting this talk together is that every one of these automations affected the culture it was inserted into. Every one has a story that goes "well we used to do it one way, and now we do something else." They have changed the human culture around them, like a stone in a river.
 
 ^ Another thing I noticed is that only some of the ways the river has changed were intentional. Most of how people respond to social systems are emergent, and you can only predict some of them.
 
-^ That's actually the theme for the next part of my talk: can we be deliberate about how we're changing culture?
+^ That's actually the theme for this next part: can we be deliberate about how we're changing culture?
 
 ---
 
@@ -280,19 +280,21 @@ Contrast this to getting an actual birthday card. Someone had to go to the store
 
 ![fit autoplay loop](images/guys.mov)
 
-^ Here's what we came up with. If our Slack bot hears you use the word "guys", he'll take you aside and have a private conversation with you, and gently explain what the problem is with that word. There's even a way to tell the robot to shut the hell up about it.
+^ Here's what we came up with. If our Slack bot hears you use the word "guys", he'll take you aside and have a private conversation with you, and gently explain what the problem is with that word. This is what we settled on after a couple of iterations.
 
-^ The response from this was interesting, there were a couple of major themes. I had a few conversations with men where they'd say "well, when I use that word I mean it in a gender-neutral way," which is exactly the problem we were trying to correct, because not everyone _hears_ it that way.
+^ The response from this was interesting, there were a couple of major themes. I had a couple conversations with men where they'd say "well, when I use that word I mean it in a gender-neutral way," which is exactly the problem we were trying to correct, because not everyone _hears_ it that way.
 
-^ But the most interesting response I got was from our office in Australia. I mentioned before that the semantics of the word "guys" is dependent on culture. It turns out that in Australia, 'guys' truly is a gender-neutral term, their entire team agreed. But as part of that discussion, certain other terms were retired from use in their office.
+^ The first couple of iterations of this did a public callout, like the 18F implementation did, and during that period I got a few people telling me how great this feature was, that it had been bugging them for a long time, but they didn't want to be the language police on their team.
 
-^ I want to hammer on this a bit. Because of a tiny bit of code I wrote, a team in Australia had a real conversation, as a team, about making sure they didn't inadvertently hurt each other with casual language, and _fixed the problem_. This was _way_ beyond the design goals for this little plugin, and I was super thrilled when they told me. Tell me this isn't like one of your life goals, for your code to have this kind of impact on even one person. I'm pretty proud of this one.
+^ But the most interesting response I got was from our office in Melbourne. It turns out that in Australia, 'guys' truly is a gender-neutral term, their entire team agreed. But as part of that discussion, certain other terms were retired from use in their office.
+
+^ Now maybe I'm being a little silly about this, but this reaction was kind of profound for me. Again, I don't know how it is here, but in the US these days, you don't just tell someone that something they're doing is a tiny bit hurtful. They get mad, and call you names. But I wrote a tiny piece of code that _made people think about their behavior_, and have a real conversation with their teammates about a sensitive subject. That was _way_ beyond the design goals for this little chat plugin, and I'm pretty proud of it.
 
 ---
 
 # [fit] `!shut up about guys`
 
-^ The downside was that some people got annoyed. The command to make the robot just leave you alone came out of this. Some of those "interesting conversations" I said I had got a little bit heated. I mostly convinced everyone this was a good move all around, but I don't really want to be the language police, so I wouldn't try to tackle anything more controversial than "guys."
+^ The downside was that some people got annoyed. There's a command to make the robot just leave you alone, and that came out of this. Some of those "interesting conversations" I had got a little bit heated. I convinced most everyone this was a good move in the end, but in order to avoid being the language police, I'd think really carefully about doing this with anything more controversial than "guys."
 
 ---
 
@@ -300,13 +302,13 @@ Contrast this to getting an actual birthday card. Someone had to go to the store
 
 ^ I also used to work at a little company called Gridium, and we had a chat bot there, too. It was actually a Hubot instance, his name was Gort! We taught him a few tricks, but probably the best one was the highfive.
 
-^ A real-life high-five is a simple thing, in human terms. It's just two people working together to clap. It's a momentary impulse, nothing too special, but it makes both participants feel good, and usually the people around them, too. This is everything that birthday cards aren't; automation can't really screw this up, but it can make it way more awesome. Here's an example, but be patient, I have to set the scene.
+^ A real-life high-five is a simple thing, in human terms. It's just two people clapping. This is everything birthday cards aren't: it's not very personal, it doesn't take a lot of thought, the more spontaneous the better. Automation can't really screw this up, but it can make it way more awesome. Here's an example, but be patient, I have to set the scene.
 
 ---
 
 ![](./images/highfive.png)
 
-^ Greg was the chief mathematician at Gridium, and he wrote the statistical model that's at the heart of their energy-management product. Patrick was on the sales team, and in order to do his job well, he needed to understand how all the math translated into value for the customer. Greg is a fabulous teacher, and had regular sessions with the sales team to help them understand the model, so Patrick wanted to thank him. So he typed this into slack.
+^ There are characters in this scene. Greg was the chief mathematician at Gridium, and he wrote the statistical model that's at the heart of their energy-management product. Patrick was on the sales team, and in order to do his job well, he needed to understand how all the math translated into value for the customer. Greg is a fabulous teacher, and had regular sessions with the sales team to help them understand the model, so Patrick wanted to thank him. So he typed this into slack.
 
 ---
 
@@ -545,19 +547,19 @@ controller.hears(
 
 ---
 
-![fit](./images/guys-code.png)
+![](./images/guys-code.jpg)
 
 ^ Of course, doing real work won't be this simple. Here's what the code for "guys" looks like. about 100 lines of code, 20 of which are a list of other phrases to use besides "guys."
 
 ---
 
-![fit](./images/highfive-code.png)
+![](./images/highfive-code.jpg)
 
 ^ And here's the code for the highfive plugin, it's just over 300 lines, and 70 of them are a list of gifs. Most of the rest is gluing two other services together. Most all of the stuff you don't want to worry about is abstracted away.
 
 ---
 
-# [fit] _**This is easy**_
+# [fit] _**You got this**_
 ## [fit] 1. Chat
 ## [fit] 2. Automate
 
@@ -577,4 +579,6 @@ controller.hears(
 
 # [fit] _**Questions?**_
 
-### [fit] Also: send me feedback with the app
+### [fit] Also: send feedback
+
+![fit, right](images/codemotion.png)
